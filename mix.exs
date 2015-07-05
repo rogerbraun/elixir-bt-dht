@@ -7,6 +7,7 @@ defmodule BtDht.Mixfile do
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     preferred_cli_env: [espec: :test],
      deps: deps]
   end
 
@@ -28,6 +29,7 @@ defmodule BtDht.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [{:elixir_bencode, "~> 1.0.0"},
-     {:mix_test_watch, "~> 0.1.1", only: :dev}]
+     {:mix_test_watch, "~> 0.1.1", only: :dev}
+   ]
   end
 end
